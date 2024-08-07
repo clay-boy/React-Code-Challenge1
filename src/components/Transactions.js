@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-function Transactions() {
+const Transactions = ({Transactions}) => {
+
+    const [TransactionsData, setTransactionsData] = useState({
+        categories : "",
+        description : "",
+        amount : "",
+
+    })
+
+
   return (
     <div>Transactions</div>
   )
 }
 
-export default Transactions
+
+export default Transactions;
