@@ -6,7 +6,7 @@ function App() {
     fetch("http://localhost:3000/transactions")
       .then((response) => response.json())
       .then((transactions) => setTransactions(transactions))
-      // .console((error) => console.log(error));
+  
   }, []);
 
   return (
