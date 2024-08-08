@@ -3,6 +3,7 @@ import "../App.css";
 import Addtransactions from "./Addtransactions";
 import Tables from "./Tables";
 import Filter from "./Filter";
+
 function App() {
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
