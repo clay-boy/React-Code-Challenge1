@@ -10,7 +10,7 @@ function App() {
   const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/transactions")
+    fetch("https://deployment-pink-kappa.vercel.app/transactions")
       .then((response) => response.json())
       .then((transactions) => {
         setTransactions(transactions);
@@ -23,7 +23,7 @@ function App() {
   const handleAddTransaction = (newTransaction) => {
     setTransactions([...transactions, newTransaction]);
 
-fetch("http://localhost:3000/transactions", {
+fetch("https://deployment-pink-kappa.vercel.app/transactions", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
