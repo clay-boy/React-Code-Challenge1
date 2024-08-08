@@ -8,12 +8,11 @@ const Transactions = ({Transactions}) => {
         amount : "",
 
     })
-
-      // Handle form submition
+    
      const handleSubmit =(e) => {
         e.preventDefault() // Prevent the default form submission
 
-        onsubmit({transactionsData});
+        onsubmit({TransactionsData});
 
         setCategories("");
         setDescription("");

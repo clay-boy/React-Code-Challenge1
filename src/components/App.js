@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "../App.css";
 import Transactions from "./Transactions";
+import Tables from "./Tables";
+import Filter from "./Filter";
 function App() {
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
@@ -13,12 +15,13 @@ function App() {
   return (
     <div className="App">
       <h1 className="title">Bank-Transactions</h1>
-
-      <ul>
-
-      </ul>
       <hr />
+
+    <Filter />
+    <Tables />
+    <Transactions />
     </div>
+
   );
 }
 export default App;
