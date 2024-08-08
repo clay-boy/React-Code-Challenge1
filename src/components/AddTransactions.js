@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Addtransactions = ({ onsubmit }) => {
+const AddTransactions = ({ onsubmit }) => {
   const [date, setDate] = useState(""); 
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -61,4 +61,4 @@ const Addtransactions = ({ onsubmit }) => {
   );
 };
 
-export default Addtransactions;
+export default AddTransactions;

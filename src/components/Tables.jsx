@@ -1,21 +1,8 @@
 import React from "react";
-import { useEffect, } from "react";
-import { useState } from "react";
 
-
-function Tables({ Transactions }) {
-    
-    const [transactions, setTransactions] = useState([]);
-    useEffect(() => {
-      fetch("http://localhost:3000/transactions")
-        .then((response) => response.json())
-        .then((transactions) => setTransactions(transactions))
-
-    }, []);
-  //checks if transactions prop is null
-  if (!transactions) {
-    //if transactions is null return "No transactions found" message.
-    return <div>NO TRANSACTION FOUND</div>;
+function Tables({ transactions }) {
+  if (transactions.length === 0) {
+    return <div>No transactions found</div>;
   }
 
   return (
@@ -29,17 +16,13 @@ function Tables({ Transactions }) {
             <th>Amount</th>
           </tr>
         </thead>
-
         <tbody>
-          {/*iterates over the transactions array*/}
-          {transactions.map((transaction, index) => (
+          {transactions.map((transaction) => (
             <tr key={transaction.id}>
-              {/*display*/}
               <td>{transaction.date}</td>
               <td>{transaction.description}</td>
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
-              <td></td>
             </tr>
           ))}
         </tbody>
