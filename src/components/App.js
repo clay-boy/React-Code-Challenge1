@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import Transactions from "./Transactions";
+import Addtransactions from "./Addtransactions";
 import Tables from "./Tables";
 import Filter from "./Filter";
 function App() {
@@ -18,8 +18,9 @@ function App() {
       <hr />
 
     <Filter />
+    <Addtransactions/>
     <Tables />
-    <Transactions />
+  
     </div>
 
   );

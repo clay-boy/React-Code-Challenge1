@@ -1,10 +1,21 @@
 import React from "react";
+import { useEffect, } from "react";
+import { useState } from "react";
 
-function Tables({ transactions }) {
+
+function Tables({ Transactions }) {
+    
+    const [transactions, setTransactions] = useState([]);
+    useEffect(() => {
+      fetch("http://localhost:3000/transactions")
+        .then((response) => response.json())
+        .then((transactions) => setTransactions(transactions))
+
+    }, []);
   //checks if transactions prop is null
   if (!transactions) {
     //if transactions is null return "No transactions found" message.
-    return <div>No transactions found</div>;
+    return <div>NO TRANSACTION FOUND</div>;
   }
 
   return (
