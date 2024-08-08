@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Addtransactions () = {
+const Addtransactions = ({ onsubmit }) => {
   const [date, setDate] = useState(""); 
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
