@@ -67,4 +67,7 @@ React-Code-Challenge1
 
 
 ## Author
-**Keith Mwai**
+- If you wa't to view the page click [here](https://react-code-challenge1-three.vercel.app/)
+```bash
+Keith Mwai
+```
